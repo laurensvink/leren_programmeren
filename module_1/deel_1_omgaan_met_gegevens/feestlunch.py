@@ -1,3 +1,14 @@
-totaal = (17 * 0.39) + (2 * 2.78) - (3 * 0.50)
-print(f"De feestlunch kost je bij de bakker {totaal} voor de 17 croissantjes en de 2 stokbroden als de 3 kortingsbonnen nog geldig zijn!")
-print("Te betalen bedrag: €{:.2f}".format(totaal))
+prijs_croissant = 0.39
+prijs_stokbrood = 2.78
+kortingsbon = 0.50
+aantal_croissant = 17
+aantal_stokbrood = 2
+aantal_kortingsbon = 3
+
+totaal_croissant = aantal_croissant * prijs_croissant
+totaal_stokbrood = aantal_stokbrood * prijs_stokbrood
+totaal_korting = aantal_kortingsbon * kortingsbon
+
+totaal_prijs = totaal_croissant + totaal_stokbrood - totaal_korting
+
+print(f"lunch kost in totaal: €{totaal_prijs:.2f}")
