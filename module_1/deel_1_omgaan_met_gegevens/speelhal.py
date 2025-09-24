@@ -1,4 +1,12 @@
-totaal = (5*7.50) + (9*0.37*5) 
-delen = totaal/2
-print(f"Dit geweldige dagje-uit met 5 mensen in de Speelhal met 45 minuten VR kost je maar {totaal} euro per persoon voor 2 mensen") 
-print(delen)   
+mensen = 5
+toegang = 7.45
+vr_per_5min = 0.37
+vr_tijd = 45
+vr_kosten = (vr_tijd / 5) * vr_per_5min
+kosten_per_persoon = toegang + vr_kosten
+totaal = kosten_per_persoon * mensen
+jij = totaal / 2
+vriend = totaal / 2
+
+print("Jij betaalt:", jij)
+print("Je vriend betaalt:", vriend)
