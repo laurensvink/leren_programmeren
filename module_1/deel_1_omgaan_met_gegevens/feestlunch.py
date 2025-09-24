@@ -1,3 +1,5 @@
+from termcolor import colored
+
 prijs_croissant = 0.39
 prijs_stokbrood = 2.78
 kortingsbon = 0.50
@@ -11,4 +13,5 @@ totaal_korting = aantal_kortingsbon * kortingsbon
 
 totaal_prijs = totaal_croissant + totaal_stokbrood - totaal_korting
 
-print(f"lunch kost in totaal: €{totaal_prijs:.2f}")
+print("lunch kost in totaal:", colored(f"€{totaal_prijs:.2f}", "blue"))
+
