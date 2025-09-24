@@ -10,5 +10,5 @@ totaal = kosten_per_persoon * mensen
 jij = totaal / 2
 vriend = totaal / 2
 
-print("Jij betaalt:", colored(jij, "blue"))
+print("Jij betaalt:", colored(jij, "blue")) 
 print("Je vriend betaalt:", colored(vriend, "blue"))
