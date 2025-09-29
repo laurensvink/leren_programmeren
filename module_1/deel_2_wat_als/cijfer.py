@@ -1,8 +1,8 @@
-cijfer = int(input("wat is je cijfer?"))
+cijfer = float(input("wat is je cijfer?"))
 
 if cijfer == 10 :
     print(f"uitmuntend je cijfer is een {cijfer}")
-if cijfer == 9 :
+if cijfer >9 or cijfer <10 :
     print(f"zeer goed je cijfer is een {cijfer}") 
 if cijfer == 8 :
     print(f"goed je cijfer is een {cijfer}") 
