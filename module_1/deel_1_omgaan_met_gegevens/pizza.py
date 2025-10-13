@@ -1,6 +1,15 @@
-aantal_small_pizza = int(input("hoeveel small pizza's wilt u bestellen?"))
-aantal_medium_pizza = int(input("hoeveel medium pizza's wilt u bestellen?"))
-aantal_big_pizza = int(input("hoeveel big pizza's wilt u bestellen?"))
+try :
+    aantal_small_pizza = int(input("hoeveel small pizza's wilt u bestellen?"))
+except : 
+    print("dat is geen heel getal!")
+try :
+    aantal_medium_pizza = int(input("hoeveel medium pizza's wilt u bestellen?"))
+except : 
+    print("dat is geen heel getal!")
+try :
+    aantal_big_pizza = int(input("hoeveel big pizza's wilt u bestellen?"))
+except :
+    print("dat is geen heel getal!")
 
 prijs_small_pizza = 5
 prijs_medium_pizza = 10
@@ -9,7 +18,7 @@ prijs_big_pizza = 20
 gekochte_small_pizza = aantal_small_pizza*prijs_small_pizza
 gekochte_medium_pizza = aantal_medium_pizza*prijs_medium_pizza
 gekochte_big_pizza = aantal_big_pizza*prijs_big_pizza
-
+   
 totaal = gekochte_big_pizza+gekochte_medium_pizza+gekochte_small_pizza
 
 print("************** KASSA BON **************")
