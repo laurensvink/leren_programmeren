@@ -14,9 +14,13 @@ time.sleep(1)
 
 # === [kamer 7] === #
 print("Welkom")
-print("Hier heb je een gratis rupee!")
-print("bewaar hem goed je heb de rupee later nodig.")
-rupee = 1
+if random.randint(1, 10) == 1:
+    print("Helaas, vandaag geen rupee voor jou")
+    rupee = 0
+else:
+    print("Hier heb je een gratis rupee!")
+    print("Bewaar hem goed, je hebt de rupee later nodig.")
+    rupee = 1
 print("er zijn 2 deuren in deze kamer! ")
 deur_keuze_kamer7 = input("Toets 1 om rechtdoor te gaan! toets 2 om rechtaf te gaan!")
 if deur_keuze_kamer7 == "1":
@@ -31,18 +35,17 @@ if deur_keuze_kamer7 == "1":
     else:  # operator == '*'
         juist_antwoord = getal1 * getal2
     print('Je stapt door de deur heen en je ziet een standbeeld voor je.')
-    print('Het standbeeld heeft een sleutel vast.')
+    print('Het standbeeld heeft een rupee vast.')
     print('Op zijn borst zit een numpad met de toetsen 9 t/m 0.')
     print(f'Daarboven zie je een som staan: {getal1}{operator}{getal2}=?')
 
     antwoord = int(input('Wat toets je in? '))
 
     if antwoord == juist_antwoord:
-        print('Het standbeeld laat de sleutel vallen en je pakt hem op!')
-        sleutel = True
+        print('Het standbeeld laat de rupee vallen en je pakt hem op!')
+        rupee += 1
     else:
         print('Er gebeurt niets....')
-        sleutel = False
     print('Je ziet een deur achter het standbeeld.')
     print("je ziet nog een deur aan de zijkant van de kamer. je kan kiezen welke deur je wilt.")
     deur_keuze = input("welke deur kies je? wil je naar kamer 8 of 6?")
@@ -64,76 +67,15 @@ if deur_keuze_kamer7 == "1":
             print("DE JACKPOT!!!")
             print("je hebt 1 rupee en 4 health gewonnen!")
             rupee += 1
-            player_health += 4
-            # === [kamer 3] === #
-            print("Welkom in de Shop!")
-            print("je kunt hier een zwaard of schild kopen!")
-            print("een zwaard of schild kost je 1 rupee!")
-            print(rupee)
-            if rupee >= 2:
-                print(f"je hebt {rupee} rupees je moet een zwaard en schild")
-                print("Je koopt een zwaard en een schild! Je koop dit met 2 rupees.")
-                rupee -= 2
-                item = ["schild","zwaard"]
-            else :
-                kopen = input("Toets 1 in om een zwaard te kopen. toets 2 in om een schild te kopen toets 3 om niks te kopen. ")
-                if kopen == "1":
-                    item = "zwaard"
-                    rupee = 0
-                elif kopen == "2":
-                    item = "schild"
-                    rupee = 0
-                else :
-                    item = "niks"
-                    rupee = 1    
+            player_health += 4  
             time.sleep(1)
         elif totaal < 7:
             print("je hebt verloren je verliest 1 health")
-            player_health -= 1
-            # === [kamer 3] === #
-            print("Welkom in de Shop!")
-            print("je kunt hier een zwaard of schild kopen!")
-            print("een zwaard of schild kost je 1 rupee!")
-            if rupee >= 2:
-                print(f"je hebt {rupee} rupees je moet een zwaard en schild")
-                print("Je koopt een zwaard en een schild! Je koop dit met 2 rupees.")
-                rupee -= 2
-                item = ["schild","zwaard"]
-            else :
-                kopen = input("Toets 1 in om een zwaard te kopen. toets 2 in om een schild te kopen toets 3 om niks te kopen. ")
-                if kopen == "1":
-                    item = "zwaard"
-                    rupee = 0
-                elif kopen == "2":
-                    item = "schild"
-                    rupee = 0
-                else :
-                    item = "niks"
-                    rupee = 1    
+            player_health -= 1 
             time.sleep(1)
         else :
             print("je hebt je rupee's verdubbeld!")
-            rupee *= 2
-            # === [kamer 3] === #
-            print("Welkom in de Shop!")
-            print("je kunt hier een zwaard of schild kopen!")
-            print("een zwaard of schild kost je 1 rupee!")
-            if rupee >= 2:
-                print(f"je hebt {rupee} rupees je moet een zwaard en schild")
-                print("Je koopt een zwaard en een schild! Je koop dit met 2 rupees.")
-                rupee -= 2
-                item = ["schild","zwaard"]
-            else :
-                kopen = input("Toets 1 in om een zwaard te kopen. toets 2 in om een schild te kopen toets 3 om niks te kopen. ")
-                if kopen == "1":
-                    item = "zwaard"
-                    rupee = 0
-                elif kopen == "2":
-                    item = "schild"
-                    rupee = 0
-                else :
-                    item = "niks"
-                    rupee = 1    
+            rupee *= 2  
             time.sleep(1)
     else :
         # === [kamer 6] === #   
@@ -177,100 +119,51 @@ else :
             print("DE JACKPOT!!!")
             print("je hebt 1 rupee en 4 health gewonnen!")
             rupee += 1
-            health += 4
-            # === [kamer 3] === #
-            print("Welkom in de Shop!")
-            print("je kunt hier een zwaard of schild kopen!")
-            print("een zwaard of schild kost je 1 rupee!")
-            if rupee >= 2:
-                print(f"je hebt {rupee} rupees je moet een zwaard en schild")
-                print("Je koopt een zwaard en een schild! Je koop dit met 2 rupees.")
-                rupee -= 2
-                item = ["schild","zwaard"]
-            else :
-                kopen = input("Toets 1 in om een zwaard te kopen. toets 2 in om een schild te kopen toets 3 om niks te kopen. ")
-                if kopen == "1":
-                    item = "zwaard"
-                    rupee = 0
-                elif kopen == "2":
-                    item = "schild"
-                    rupee = 0
-                else :
-                    item = "niks"
-                    rupee = 1    
+            health += 4 
             time.sleep(1)
         elif totaal < "7":
             print("je hebt verloren je verliest 1 health")
             health -= 1  
-            # === [kamer 3] === #
-            print("Welkom in de Shop!")
-            print("je kunt hier een zwaard of schild kopen!")
-            print("een zwaard of schild kost je 1 rupee!")
-            if rupee >= 2:
-                print(f"je hebt {rupee} rupees je moet een zwaard en schild")
-                print("Je koopt een zwaard en een schild! Je koop dit met 2 rupees.")
-                rupee -= 2
-                item = ["schild","zwaard"]
-            else :
-                kopen = input("Toets 1 in om een zwaard te kopen. toets 2 in om een schild te kopen toets 3 om niks te kopen. ")
-                if kopen == "1":
-                    item = "zwaard"
-                    rupee = 0
-                elif kopen == "2":
-                    item = "schild"
-                    rupee = 0
-                else :
-                    item = "niks"
-                    rupee = 1    
             time.sleep(1)
         else :
             print("je hebt je rupee's verdubbeld!")
             rupee *= 2
-            # === [kamer 3] === #
-            print("Welkom in de Shop!")
-            print("je kunt hier een zwaard of schild kopen!")
-            print("een zwaard of schild kost je 1 rupee!")
-            if rupee >= 2:
-                print(f"je hebt {rupee} rupees je moet een zwaard en schild")
-                print("Je koopt een zwaard en een schild! Je koop dit met 2 rupees.")
-                rupee -= 2
-                item = ["schild","zwaard"]
-            else :
-                kopen = input("Toets 1 in om een zwaard te kopen. toets 2 in om een schild te kopen toets 3 om niks te kopen. ")
-                if kopen == "1":
-                    item = "zwaard"
-                    rupee = 0
-                elif kopen == "2":
-                    item = "schild"
-                    rupee = 0
-                else :
-                    item = "niks"
-                    rupee = 1    
             time.sleep(1)
 
-    else :
-            # === [kamer 3] === #
-            print("Welkom in de Shop!")
-            print("je kunt hier een zwaard of schild kopen!")
-            print("een zwaard of schild kost je 1 rupee!")
-            if rupee >= 2:
-                print(f"je hebt {rupee} rupees je moet een zwaard en schild")
-                print("Je koopt een zwaard en een schild! Je koop dit met 2 rupees.")
-                rupee -= 2
-                item = ["schild","zwaard"]
-            else :
-                kopen = input("Toets 1 in om een zwaard te kopen. toets 2 in om een schild te kopen toets 3 om niks te kopen. ")
-                if kopen == "1":
-                    item = "zwaard"
-                    rupee = 0
-                elif kopen == "2":
-                    item = "schild"
-                    rupee = 0
-                else :
-                    item = "niks"
-                    rupee = 1    
-            time.sleep(1)
+# === [kamer 9] === #
+print("welkom in deze betoverde kamer...")
+keuze = random.choice(["defence", "health"])
 
+if keuze == "defence":
+    player_defense += 1
+    print("De magie versterkt je verdediging! +1 defence")
+else:
+    player_health += 2
+    print("De magie geneest je lichaam! +2 health")
+
+
+# === [kamer 3] === #
+print("Welkom in de Shop!")
+print("je kunt hier een zwaard, schild of sleutel kopen!")
+print("een zwaard of schild kost je 1 rupee!")
+print("de sleutel kost je 2 rupees!")
+print(rupee)
+if rupee >= 2:
+    print(f"je hebt {rupee} rupees je moet een zwaard en schild")
+    print("Je koopt een zwaard en een schild! Je koop dit met 2 rupees.")
+    rupee -= 2
+    item = ["schild","zwaard"]
+else :
+    kopen = input("Toets 1 in om een zwaard te kopen. toets 2 in om een schild te kopen toets 3 om de sleutel te kopen. en 4 om niks te kopen!")
+    if kopen == "1":
+        item = "zwaard"
+        rupee -= 1
+    elif kopen == "2":
+        item = "schild"
+        rupee -= 0
+    elif kopen == "3":
+        sleutel = True
+        rupee -= 2    
 
 # === [kamer 4] === #
 Boycke_attack = 2
