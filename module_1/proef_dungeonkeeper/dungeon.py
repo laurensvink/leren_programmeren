@@ -1,6 +1,4 @@
-import time, math
-import random
-import time
+import time, math, random
 player_attack = 1
 player_defense = 0
 player_health = 3
