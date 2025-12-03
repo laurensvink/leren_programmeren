@@ -1,11 +1,15 @@
-totaal = 50
-optel_getal = totaal
-#start = 50
+totaal = 0
+optel_getal = 50
 eind = 1000
 rekensom = ""
-while totaal < eind:
-    optel_getal+=1
-    rekensom += f"{totaal}+"
-    totaal = totaal+optel_getal
-    print(totaal)
-    print(rekensom)  
+stap = 1
+
+while totaal <= eind:
+    totaal += optel_getal
+    rekensom += f"{optel_getal} + "
+    nette_rekensom = rekensom[:-3]
+
+    print(f"{stap}. {nette_rekensom} = {totaal}")
+
+    optel_getal += 1
+    stap += 1
