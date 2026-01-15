@@ -5,8 +5,8 @@ print("alle dagen van de week zijn:")
 for dag in dagen:
     print("-", dag)
 print()
-
-print("de weekenddagen zijn: Zaterdag en Zondag")
+for dag in dagen:
+    print("de weekenddagen zijn: Zaterdag en Zondag")
 print()
 
 print("de werkdagen zijn: Maandag, Dinsdag, Woensdag, Donderdag en Vrijdag")
