@@ -6,5 +6,6 @@ while ap <5:
     iww = input("Voer het wachtwoord in!")
     if iww == ww:
         print(f"Je hebt het wachtwoord geraden in {ap}pogingen")
+        break
 else:
     print("je hebt het wachtwoord na 5 pogingen niet geraden je bent verbannen!")
