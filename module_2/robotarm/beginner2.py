@@ -4,9 +4,64 @@ from RobotArm import RobotArm
 from beginner import challenges
 
 # load the robotarm with a challenge on a level (max 3)
-robotArm = RobotArm(challenges[1],0)
+robotArm = RobotArm(challenges[2],0)
 
 # your code starts here:
+robotArm.moveRight()
+robotArm.grab()
+if robotArm.scan() == 'green':
+    robotArm.moveRight()
+    robotArm.drop()
+    robotArm.moveLeft()
+else:
+    robotArm.moveLeft()
+    robotArm.drop()
+    robotArm.moveRight()
+robotArm.grab()
+if robotArm.scan() == 'green':
+    robotArm.moveRight()
+    robotArm.drop()
+    robotArm.moveLeft()
+else:
+    robotArm.moveLeft()
+    robotArm.drop()
+    robotArm.moveRight()
+robotArm.grab()
+if robotArm.scan() == 'green':
+    robotArm.moveRight()
+    robotArm.drop()
+    robotArm.moveLeft()
+else:
+    robotArm.moveLeft()
+    robotArm.drop()
+    robotArm.moveRight()
+robotArm.grab()
+if robotArm.scan() == 'green':
+    robotArm.moveRight()
+    robotArm.drop()
+    robotArm.moveLeft()
+else:
+    robotArm.moveLeft()
+    robotArm.drop()
+    robotArm.moveRight()
+robotArm.grab()
+if robotArm.scan() == 'green':
+    robotArm.moveRight()
+    robotArm.drop()
+    robotArm.moveLeft()
+else:
+    robotArm.moveLeft()
+    robotArm.drop()
+    robotArm.moveRight()
+robotArm.grab()
+if robotArm.scan() == 'green':
+    robotArm.moveRight()
+    robotArm.drop()
+    robotArm.moveLeft()
+else:
+    robotArm.moveLeft()
+    robotArm.drop()
+    robotArm.moveRight()
 
 
 

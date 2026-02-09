@@ -1,29 +1,23 @@
 from RobotArm import RobotArm
 
 # Import the challenges (in this case challenges/example.py)
-from beginner import challenges
+from medium import challenges
 
 # load the robotarm with a challenge on a level (max 3)
-robotArm = RobotArm(challenges[1],0)
+robotArm = RobotArm(challenges[2],0)
 
 # your code starts here:
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
+x = 0
+while x < 5:
+    i = 0
 
-
+    while i < 6:
+        robotArm.moveRight()
+        robotArm.grab()
+        robotArm.moveLeft()
+        robotArm.drop()
+        i += 1
+    x += 1
 
 # your code ends here
 
