@@ -5,12 +5,16 @@ player_health = 3
 item = "niks"
 sleutel = False
 mag_nog_kamer8 = True
+
+
 # === [kamer 1] === #
 print('Door de twee grote deuren loop je een gang binnen.')
 print('Het ruikt hier muf en vochtig.')
 print('Je ziet een deur voor je.')
 print('en de deur gaat piepend voor je neus open.')
 time.sleep(1)
+
+
 # === [kamer 7] === #
 print("Welkom")
 if random.randint(1, 10) == 1:
@@ -47,6 +51,8 @@ if deur_keuze_kamer7 == "1":
     print("je ziet nog een deur aan de zijkant van de kamer. je kan kiezen welke deur je wilt.")
     deur_keuze = input("welke deur kies je? wil je naar kamer 8 of 6? toets voor kamer 6-> 1 en voor kamer 8-> 2 ")
     if deur_keuze == "1":
+
+
         # === [kamer 6] === #
         zombie_attack = 2
         zombie_defense = 0
@@ -66,6 +72,8 @@ if deur_keuze_kamer7 == "1":
         kamer_keuze_6 = input("kamer 3 of kamer 8")
         if kamer_keuze_6 == "3":
             mag_nog_kamer8 = False
+
+
     # === [kamer 8] === 
     if mag_nog_kamer8 == True:
         print("welkom in de gok kamer!")
@@ -106,6 +114,8 @@ if deur_keuze_kamer7 == "1":
                     else:
                         player_health += 2
                         print("De magie geneest je lichaam! +2 health.")
+
+
 # === [kamer 3] === #
 print("Welkom in de Shop!")
 print("Je kunt hier een zwaard, schild of sleutel kopen!")
@@ -129,6 +139,8 @@ else:
         rupee -= 2
     else:
         item = "niks"
+
+
 # === [kamer 4] === #
 Boycke_attack = 2
 Boycke_defense = 0
@@ -155,6 +167,8 @@ else:
         print('Game over.')
         exit()
 print('')
+
+
 # === [kamer 5] === #
 print('Voorzichtig open je de deur, je wilt niet nog een zombie tegenkomen.')
 print('Tot je verbazig zie je een schatkist in het midden van de kamer staan.')
