@@ -7,8 +7,19 @@ from medium import challenges
 robotArm = RobotArm(challenges[3],0)
 
 # your code starts here:
-
-
+for i in range(9):
+    robotArm.moveRight()
+for i in range(9):
+    robotArm.moveLeft()
+    robotArm.grab()
+    robotArm.scan()
+    if robotArm.scan() == 'white':
+        robotArm.moveRight()
+        robotArm.drop()
+        robotArm.moveLeft()
+    else:
+        robotArm.drop()
+        
 
 # your code ends here
 

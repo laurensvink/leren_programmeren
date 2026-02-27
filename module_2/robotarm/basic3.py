@@ -12,18 +12,18 @@ robotArm.moveRight()
 robotArm.drop()
 robotArm.moveLeft()
 robotArm.grab()
-robotArm.moveRight()
-robotArm.moveRight()
+for i in range(2):
+    robotArm.moveRight()
 robotArm.drop()
 robotArm.moveLeft()
 robotArm.grab()
 robotArm.moveLeft()
 robotArm.drop()
-robotArm.moveRight()
-robotArm.moveRight()
+for i in range(2):
+    robotArm.moveRight()
 robotArm.grab()
-robotArm.moveLeft()
-robotArm.moveLeft()
+for i in range(2):
+    robotArm.moveLeft()
 robotArm.drop()
 
 # your code ends here

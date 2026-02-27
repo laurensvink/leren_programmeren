@@ -1,32 +1,23 @@
 from RobotArm import RobotArm
 
 # Import the challenges (in this case challenges/example.py)
-from beginner import challenges
+from expert import challenges
 
 # load the robotarm with a challenge on a level (max 3)
-robotArm = RobotArm(challenges[4],0)
+robotArm = RobotArm(challenges[1],0)
 
 # your code starts here:
-def move_left_once():
-    robotArm.grab()
-    robotArm.moveLeft()
-    robotArm.drop()
+robotArm.grab()
+for i in range(5):
     robotArm.moveRight()
-
-def move_right_once():
-    robotArm.grab()
-    robotArm.moveRight()
-    robotArm.drop()
+robotArm.drop()
+for i in range(4):
     robotArm.moveLeft()
-
-robotArm.moveRight()
-
-
-for _ in range(3):
-    move_left_once()
-    move_right_once()
-
-
+robotArm.grab()
+for i in range(2):
+    for i in range(5):
+        robotArm.moveRight()
+    robotArm.drop()
 # your code ends here
 
 # report the results of the mission

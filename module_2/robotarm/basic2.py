@@ -11,16 +11,19 @@ robotArm.moveRight()
 robotArm.grab()
 robotArm.moveLeft()
 robotArm.drop()
-robotArm.moveRight()
-robotArm.moveRight()
+
+for i in range(2):
+    robotArm.moveRight()
 robotArm.grab()
 robotArm.moveLeft()
 robotArm.drop()
+
 robotArm.moveLeft()
 robotArm.grab()
-robotArm.moveRight()
-robotArm.moveRight()
+for i in range(2):
+    robotArm.moveRight()
 robotArm.drop()
+
 # your code ends here
 
 # report the results of the mission

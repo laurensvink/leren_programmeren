@@ -1,27 +1,28 @@
 from RobotArm import RobotArm
 
 # Import the challenges (in this case challenges/example.py)
-from beginner import challenges
+from expert import challenges
 
 # load the robotarm with a challenge on a level (max 3)
 robotArm = RobotArm(challenges[2],0)
 
-# your code starts here:
-robotArm.moveRight()
-
-for i in range(6):
+# your code starts here
+for i in range(9):
+    stapel = robotArm.stackIndex()
     robotArm.grab()
-    
-    if robotArm.scan() == 'green':
-        robotArm.moveRight()
-        robotArm.drop()
-        robotArm.moveLeft()
+    if robotArm.scan() == "red": 
+        while robotArm.stackIndex()< 9:
+            robotArm.moveRight()
+        robotArm.drop() 
     else:
-        robotArm.moveLeft()
         robotArm.drop()
+        robotArm.moveRight() 
+
+    if robotArm.stackIndex() == 9:
+        while robotArm.stackIndex() > stapel:
+            robotArm.moveLeft()
+    if robotArm.stackIndex() == stapel:
         robotArm.moveRight()
-
-
 
 
 # your code ends here

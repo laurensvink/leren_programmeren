@@ -7,21 +7,11 @@ from beginner import challenges
 robotArm = RobotArm(challenges[1],0)
 
 # your code starts here:
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
-robotArm.moveLeft()
-robotArm.grab()
-robotArm.moveRight()
-robotArm.drop()
+for i in range(4):
+    robotArm.grab()
+    robotArm.moveRight()
+    robotArm.drop()
+    robotArm.moveLeft()
 
 
 

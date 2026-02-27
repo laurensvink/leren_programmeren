@@ -7,49 +7,19 @@ from beginner import challenges
 robotArm = RobotArm(challenges[5],0)
 
 # your code starts here:
-robotArm.moveRight()
-robotArm.grab()
-for i in range(8):
-    robotArm.moveRight()
-robotArm.drop()
-for i in range(8):
-    robotArm.moveLeft()
-robotArm.grab()
-for i in range(8):
-    robotArm.moveRight()
-robotArm.drop()
-for i in range(8):
-    robotArm.moveLeft()
-robotArm.grab()
-for i in range(8):
-    robotArm.moveRight()
-robotArm.drop()
-for i in range(8):
-    robotArm.moveLeft()
-robotArm.grab()
-for i in range(8):
-    robotArm.moveRight()
-robotArm.drop()
-for i in range(8):
-    robotArm.moveLeft()
-robotArm.grab()
-for i in range(8):
-    robotArm.moveRight()
-robotArm.drop()
-for i in range(8):
-    robotArm.moveLeft()
-robotArm.grab()
-for i in range(8):
-    robotArm.moveRight()
-robotArm.drop()
-for i in range(8):
-    robotArm.moveLeft()
-robotArm.grab()
-for i in range(8):
-    robotArm.moveRight()
-robotArm.drop()
-for i in range(8):
-    robotArm.moveLeft()
+def move_block(steps):
+    robotArm.grab()
+    for _ in range(steps):
+        robotArm.moveRight()
+    robotArm.drop()
+    for _ in range(steps):
+        robotArm.moveLeft()
+robotArm.moveRight()  # initial starting move
+
+# Repeat for 8 blocks
+for _ in range(8):
+    move_block(8)
+
 
 
 
