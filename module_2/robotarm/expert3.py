@@ -7,7 +7,23 @@ from expert import challenges
 robotArm = RobotArm(challenges[3],0)
 
 # your code starts here:
+currentPlace = 1  # eerste plek rechts
 
+while not robotArm.stackEmpty():
+    
+    robotArm.grab()
+    
+   
+    while robotArm.stackIndex() < currentPlace:
+        robotArm.moveRight()
+    
+    robotArm.drop()
+    
+    
+    while robotArm.stackIndex() > 0:
+        robotArm.moveLeft()
+    
+    currentPlace += 1
 
 
 # your code ends here

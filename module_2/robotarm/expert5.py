@@ -7,7 +7,46 @@ from expert import challenges
 robotArm = RobotArm(challenges[5],0)
 
 # your code starts here:
+colorCount = {}
+while robotArm.moveLeft(): pass 
 
+while True:
+    if not robotArm.stackEmpty():
+        robotArm.grab()
+        c = robotArm.scan()
+        robotArm.drop()
+        colorCount[c] = colorCount.get(c, 0) + 1
+    if not robotArm.moveRight():
+        break
+
+mostCommon = None
+maxCount = -1
+for color, count in colorCount.items():
+    if count > maxCount:
+        mostCommon = color
+        maxCount = count
+
+
+while True:
+    moved = False
+    
+    while robotArm.moveLeft(): pass  # helemaal links
+    
+    while True:
+        if not robotArm.stackEmpty():
+            robotArm.grab()
+            if robotArm.scan() == mostCommon:
+                while robotArm.stackIndex() > 0:
+                    robotArm.moveLeft()
+                robotArm.drop()
+                moved = True
+            else:
+                robotArm.drop()
+        if not robotArm.moveRight():
+            break
+    
+    if not moved:
+        break
 
 
 # your code ends here
