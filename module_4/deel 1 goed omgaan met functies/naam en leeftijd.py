@@ -1,7 +1,8 @@
 def naam_leeftijd():
     name = input("Wat is je naam? ").lower()
     age = int(input("Wat is je leeftijd? "))
-    return {"name": name, "age": age}
+    city = input("wat is je woonplaats? ").lower()
+    return {"name": name, "age": age, "city": city}
 
 
 def verzamel_gegevens():
@@ -17,12 +18,10 @@ def verzamel_gegevens():
 
     return resultaten
 
-
-
 alle_data = verzamel_gegevens()
-
 
 for persoon in alle_data:
     naam = persoon["name"]
     leeftijd = persoon["age"]
-    print(f"je naam is {naam} en je bent {leeftijd} jaar")
+    woonplaats = persoon["city"]
+    print(f"je naam is {naam} en je bent {leeftijd} jaar en je woont in {woonplaats}")
