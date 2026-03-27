@@ -1,17 +1,28 @@
 def naam_leeftijd():
     name = input("Wat is je naam? ").lower()
     age = int(input("Wat is je leeftijd? "))
-    name_age["name"] = name
-    name_age["age"] = age
-
-name_age = {}
+    return {"name": name, "age": age}
 
 
-naam_leeftijd()
+def verzamel_gegevens():
+    resultaten = []
+
+    while True:
+        data = naam_leeftijd()
+        resultaten.append(data)
+
+        doorgaan = input("Toets enter om door te gaan of stop om te printen: ").lower()
+        if doorgaan == "stop":
+            break
+
+    return resultaten
 
 
-values_list = list(name_age.values())
-naam = values_list[0] 
-leeftijd = values_list[1]  
 
-print(f"je naam is {naam} en je bent {leeftijd} jaar")
+alle_data = verzamel_gegevens()
+
+
+for persoon in alle_data:
+    naam = persoon["name"]
+    leeftijd = persoon["age"]
+    print(f"je naam is {naam} en je bent {leeftijd} jaar")
