@@ -1,0 +1,44 @@
+{
+    "roomorder": "1,4,9,6,2,10",
+    "start": "13-04-2026 11:24:21",
+    "end": "13-04-2026 11:26:05",
+    "data": {
+        "player": {
+            "noice": 1,
+            "pickups": []
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 9"
+            ],
+            "doorcode": "",
+            "errors": [],
+            "roomanswers": [
+                "room1 : a",
+                "room9 : None"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je rent over de brug met de trol op je hielen.",
+                "De houte loopbrug kraakt en beweegt heftig.",
+                "Net voor je bij het einde bent voel je de brug breken achter je.",
+                "Zonder twijfel neem je een sprong en komt aan de overkant op solide aarde terecht.",
+                "Je kunt nog net zien hoe de trol met brug en al de diepte in valt en je hoort een harde plof.",
+                "Je staat op en stoft jezelf af.",
+                "Je ziet voor je een open hek.",
+                "...",
+                "Je bent ergens waar je niet verwacht te zijn.",
+                "Je bent verdwaald geraakt in de dungeon."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : a"
+            ],
+            "errors": []
+        }
+    }
+}
