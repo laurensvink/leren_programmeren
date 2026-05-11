@@ -7,7 +7,7 @@ def stap2(aantal):
         if keuze == "hoorntje" or keuze == "bakje":
             return keuze
         else:
-            print("Sorry, dat snap ik niet...")
+            print("Sorry dat is geen optie die we aanbieden...")
 
 while True:
     while True:
