@@ -1,5 +1,8 @@
 print("Welkom bij Papi Gelato. je mag alle smaken kiezen zolang het maar vanille ijs is.")
 
+prijs_bolletje = 0.95
+totaal = 0
+
 def stap2(aantal):
     while True:
         keuze = input(f"Wilt u deze {aantal} bolletje(s) in een hoorntje of een bakje? ")
@@ -20,10 +23,14 @@ while True:
                 verpakking = stap2(aantal)
 
                 print(f"Hier is uw {verpakking} met {aantal} bolletje(s).")
+                totaal += aantal * prijs_bolletje
+                print(f"Dat kost €{aantal * prijs_bolletje:.2f}")
                 break
 
             elif 4 <= aantal <= 8:
                 print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes")
+                totaal += aantal * prijs_bolletje
+                print(f"Dat kost €{aantal * prijs_bolletje:.2f}")
                 break
 
             elif aantal > 8:
@@ -39,7 +46,7 @@ while True:
             break
 
         elif meer == "nee":
-            print("Bedankt en tot ziens!")
+            print(f"Bedankt voor uw bestelling. Het totaalbedrag is €{totaal:.2f}")
             exit()
 
         else:
