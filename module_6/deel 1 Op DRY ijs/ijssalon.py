@@ -1,6 +1,7 @@
 print("Welkom bij Papi Gelato. je mag alle smaken kiezen zolang het maar vanille ijs is.")
 
 prijs_bolletje = 0.95
+btw_percentage = 0.06
 totaal = 0
 
 def stap2(aantal):
@@ -23,14 +24,20 @@ while True:
                 verpakking = stap2(aantal)
 
                 print(f"Hier is uw {verpakking} met {aantal} bolletje(s).")
-                totaal += aantal * prijs_bolletje
-                print(f"Dat kost €{aantal * prijs_bolletje:.2f}")
+                subtotaal = aantal * prijs_bolletje
+                btw = subtotaal * btw_percentage
+                totaal_order = subtotaal + btw
+                totaal += totaal_order
+                print(f"Dat kost €{totaal_order:.2f} (inclusief {btw_percentage*100}% BTW)")
                 break
 
             elif 4 <= aantal <= 8:
                 print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes")
-                totaal += aantal * prijs_bolletje
-                print(f"Dat kost €{aantal * prijs_bolletje:.2f}")
+                subtotaal = aantal * prijs_bolletje
+                btw = subtotaal * btw_percentage
+                totaal_order = subtotaal + btw
+                totaal += totaal_order
+                print(f"Dat kost €{totaal_order:.2f} (inclusief {btw_percentage*100}% BTW)")
                 break
 
             elif aantal > 8:
